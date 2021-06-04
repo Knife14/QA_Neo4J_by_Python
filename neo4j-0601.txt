@@ -1,3 +1,5 @@
+// Neo4J
+
 CREATE (a:Person {name:"项目经理"})
 CREATE (b:Person {name:"工人"})
 CREATE (c:Person {name:"班组"})
