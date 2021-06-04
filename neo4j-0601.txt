@@ -1,0 +1,188 @@
+CREATE (a:Person {name:"项目经理"})
+CREATE (b:Person {name:"工人"})
+CREATE (c:Person {name:"班组"})
+
+CREATE (d:Person {name:"专兼职安全生产管理人员"})
+CREATE (e:Person {name:"现场机电维修人员"})
+
+CREATE (f:Person {name:"指挥人员"})
+CREATE (f1:Person {name:"起重机械配备专业指挥人员"})
+
+CREATE (h:Person {name:"劳资员"})
+CREATE (i:Person {name:"工地保安人员"})
+CREATE (j:Person {name:"承包单位（商）"})
+
+CREATE (k:Person {name:"项目人员管理人员"})
+CREATE (m:Person {name:"现场协调管理人员"})
+CREATE (n:Person {name:"安全文明管理人员"})
+
+CREATE (A:subject {name:"施工单位安全生产保证体系"})
+
+CREATE (B:subject {name:"各项施工安全管理制度"})
+CREATE (B1:subject {name:"班前会、安全例会、安全检查、安全施工作业票、安全技术交底、安全监护、安全评价等"})
+
+CREATE (C:subject {name:"投入现场的施工机械、运输车辆等的安全管理情况"})
+CREATE (D:subject {
+            name:"安全工器具、个人安全防护用品（三宝）",
+            content:"安全帽、安全带、安全网"
+            })
+
+CREATE (E:subject {name:"灾害防范措施"})
+CREATE (E1:subject {name:"夏季防暑降温、防雷击、防食物中毒、防汛、防强风"})
+CREATE (E2:subject {name:"冬季防冻、防火、防煤气中毒"})
+CREATE (E3:subject {name:"其他灾害防范措施的具体落实情况"})
+
+CREATE (F:subject {name:"工程用火监护制度"})
+CREATE (G:subject {
+            name:"安全文明施工措施",
+            content:"恰当的标语和安全警戒标志"
+            })
+CREATE (H:subject {name:"三班值勤和夜间巡逻制度"})
+CREATE (I:subject {
+            name:"排水措施", 
+            content:"施工污水沉淀排入指定的地方"
+            })
+CREATE (J:subject {name:"安全措施补助费及文明施工措施费"})
+
+CREATE (K:subject {name:"施工环节的重要部分"})
+CREATE (K1:subject {
+            name:"土建工程",
+            content:"深基坑开挖和支护、土石方爆破，塔吊安装、拆卸，人货电梯安装、拆卸，高大模板，混凝土浇筑，脚手架搭设、拆除等"
+            })
+CREATE (K2:subject {
+            name:"起重机满负荷起吊",
+            content:"两台及以上起重机抬吊作业，移动式起重机在高压线下方及其附近作业，带电作业及临近带电体作业"
+            })
+CREATE (K3:subject {
+            name:"建筑设备安装工程", 
+            content:"电气设备送电试验、消防试验、电梯试运行"
+            })
+
+CREATE (L1:subject {name:"分部分项工程的安全生产技术措施和安全专项施工方案是否符合标准规范要求"})
+CREATE (L2:subject {name:"设备触电漏电保护是否完好有效"})
+CREATE (L3:subject {name:"施工现场的场地布置与管理是否符合相关要求"})
+CREATE (L4:subject {name:"施工总平面布置图是否合理"})
+CREATE (L5:subject {name:"临时设施设置以及排水、防火措施是否符合安全技术标准和文明施工的要求"})
+CREATE (L6:subject {name:"施工现场的场地布置与管理是否符合相关要求"})
+
+CREATE (N:subject {name:"无施工方案不施工, 有方案没交底不施工, 班组上岗前没安全交底不施工"})
+
+CREATE (O:subject {name:"起重机械“五限位、三保险、十不吊”规定"})
+CREATE (P:subject {name:"“ 十不烧” 规定"})
+
+CREATE (Q:subject {name:"工资"})
+
+CREATE (R:subject {name:"施工现场"})
+CREATE (S:subject {name:"施工单位"})
+
+CREATE (T1:subject {name:"宿舍"})
+CREATE (T2:subject {name:"危化品存放库"})
+CREATE (T3:subject {name:"放置涂料工具的地方"})
+CREATE (T4:subject {
+            name:"集污池",
+            content:"钢化材料，分级排管"
+            })
+CREATE (T5:subject {name:"厨房"})
+CREATE (T6:subject {name:"主电箱"})
+CREATE (T7:subject {name:"接电口"})
+CREATE (T8:subject {name:"安全平网"})
+
+CREATE (U:subject {name:"交叉作业、跨越施工和工序交接"})
+
+CREATE (V:subject {name:"安全生产教育"})
+CREATE (W:subject {name:"结合工程进度及不同施工工艺, 进行针对性的安全知识与遵章守纪教育。进入施工现场的人员带好安全帽, 在没有可靠安全防护措施的高处作业系好安全带。施工区域严格遵守安全生产六大纪律, 严格执行安全生产规则。"})
+
+CREATE (X:subject {name:"各级管理人员及班组负责人的详细名单及联系方式"})
+
+CREATE (Y1:subject {name:"施工补充协议"})
+CREATE (Y2:subject {name:"相应临设安排方案"})
+CREATE (Y3:subject {name:"有关施工组织设计"})
+CREATE (Y4:subject {name:"施工安排"})
+CREATE (Y5:subject {name:"开工报告"})
+
+CREATE
+(k) -[:包含]->(m),
+(k) -[:包含]->(a),
+
+(a) -[:沟通尊重]->(b),
+(a) -[:公平奖罚]->(b),
+(a) -[:合理安排工作]->(b),
+
+(a) -[:监督]->(c),
+(a) -[:进行安全警示教育给]->(c),
+
+(a) -[:监督到岗]->(d),
+(a) -[:职责履行]->(d),
+
+(a)-[:监督使用]->(J),
+(a)-[:设立]->(h),
+(a)-[:规定要求]->(j),
+(a)-[:督促完成]->(j),
+(j)-[:配备]->(i),
+
+(f) -[:包含]->(f1),
+(a) -[:监督]->(f),
+(a) -[:监督运行]->(A),
+(a) -[:监督完善]->(B),
+(B) -[:包括]->(B1),
+(a) -[:监督]->(C),
+(a) -[:监督保障]->(D),
+
+(a) -[:落实]-> (E),
+(E) -[:包含]-> (E1),
+(E) -[:包含]-> (E2),
+(E) -[:包含]-> (E3),
+
+(a)-[:核实]->(L1),
+
+(a)-[:监督]->(e),
+(e)-[:核实]->(L2),
+(a)-[:核实]->(L3),
+(a)-[:核实]->(L4),
+(a)-[:核实]->(L5),
+(a)-[:核实]->(L6),
+(L1)-[:包括]->(N),
+(L1)-[:包括]->(L2),
+(K) -[:包括]->(K1),
+(K) -[:包括]->(K2),
+(K) -[:包括]->(K3),
+
+(j)-[:遵守]->(N),
+(j)-[:遵守]->(O),
+(j)-[:遵守]->(F),
+(j)-[:遵守]->(P),
+(j)-[:进行]->(V),
+
+(h)-[:安排]->(T1),
+(h)-[:发放]->(Q),
+
+(i)-[:执行]->(H),
+
+(X)-[:经甲方考察合格后进入]->(Y1),
+(V)-[:包括]->(W),
+
+(m)-[:协调]->(R),
+(m)-[:属于]->(S),
+
+(b)-[:隔层铺设]->(T8),
+(b)-[:及时清理]->(T8),
+
+(n) -[:管理]->(R),
+
+(R) -[:应设置]->(G),
+(R) -[:应设置]->(n),
+(R) -[:设置]->(I),
+(R) -[:应设置]->(T6),
+(R)-[:包含]->(T5),
+(R) -[:设置]->(T2),
+(T2)-[:为工人提供]->(T3),
+(T5)-[:设置]->(T4),
+(T6)-[:距离不超过10米]->(T7),
+
+(S)-[:进场前向甲方提供]->(X),
+(S)-[:落实]->(G),
+(S)-[:在临设施工前向甲方提交]->(Y2),
+(S)-[:开工前15天向甲方报送]->(Y3),
+(S)-[:经甲方工程部签字确认后可进行]->(Y4),
+(S)-[:正式动工前一天必须提交]->(Y5),
+(S)-[:安全文明施工]->(U)
